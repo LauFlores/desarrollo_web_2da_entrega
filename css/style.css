@@ -296,9 +296,40 @@ ul, ol {
   color: #ffffff;
 }
 
+/* ---Estructura con grids--- */
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  grid-template-rows: 10% 20% 20% 20% 20% 15%;
+  grid-template-areas: 
+  
+  "header header header"
+  
+  "main main main"
+  
+  "section section section"
+  
+  "footer footer footer"
+}
+
+.header{
+  grid-area: header;
+
+}
+.main{
+  grid-area: main;
+}
+.section{
+  grid-area: section;
+}
+.footer{
+  grid-area: footer;
+}
+
 @media (max-width: 320px) {
 
-  .container {
+  .grid-container{
   
   grid-template-areas: 
   
@@ -307,7 +338,22 @@ ul, ol {
   "main"
   
   "section"
+  "section" 
+  "section"
   
   "footer"
+  }
+  .header{
+    grid-area: header;
+  
+  }
+  .main{
+    grid-area: main;
+  }
+  .section{
+    grid-area: section;
+  }
+  .footer{
+    grid-area: footer;
   }
 }
