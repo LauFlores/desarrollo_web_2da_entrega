@@ -300,8 +300,8 @@ ul, ol {
 
 .grid-container{
   display: grid;
-  grid-template-columns: 500px 500px 500px;
-  grid-template-rows: 10% 20% 20% 20% 20% 15%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px repeat(2,1fr) 100px;
   grid-template-areas: 
   
   "header header header"
@@ -310,7 +310,8 @@ ul, ol {
   
   "section section section"
   
-  "footer footer footer"
+  "footer footer footer";
+  row-gap: 10px;
 }
 
 .header{
