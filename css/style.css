@@ -308,10 +308,11 @@ ul, ol {
   
   "main main main"
   
-  "section section section"
+  "section section2 section3"
   
   "footer footer footer";
-  row-gap: 10px;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
 .header{
@@ -324,14 +325,63 @@ ul, ol {
 .section{
   grid-area: section;
 }
+.section2{
+  grid-area: section2;
+}
+.section3{
+  grid-area: section3;
+}
 .footer{
   grid-area: footer;
 }
 
-@media (max-width: 320px) {
+.section, .section2, .section3{
+  margin: 50px;
+  text-align: center;
+  }
+
+/* ---tamaño tablet - 768px */
+  @media screen and (max-width: 768px) {
+
+    .grid-container{
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% repeat(4, 1fr) 10%;
+    grid-template-areas: 
+    
+    "header"
+    
+    "main"
+    
+    "section"
+  
+    "section2" 
+  
+    "section3"
+    
+    "footer"
+    }
+    .header{
+      grid-area: header;
+    
+    }
+    .main{
+      grid-area: main;
+    }
+    .section{
+      grid-area: section;
+    }
+    .footer{
+      grid-area: footer;
+    }
+  }
+
+
+  /* ---tamaño mobile - 320px - 420px - 480px [500px]*/
+@media screen and (max-width: 500px) {
 
   .grid-container{
-  
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% repeat(4, 1fr) 10%;
   grid-template-areas: 
   
   "header"
@@ -339,15 +389,20 @@ ul, ol {
   "main"
   
   "section"
-  "section" 
-  "section"
+
+  "section2" 
+
+  "section3"
   
   "footer"
   }
   .header{
     grid-area: header;
-  
   }
+  .nav{
+  display: flex;
+  flex-direction: column;
+}
   .main{
     grid-area: main;
   }
