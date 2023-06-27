@@ -417,8 +417,30 @@ ul, ol {
     .section3{
       grid-area: section3;
     }
+    .section_cla{
+      grid-area: section;}
+    .section_cla2{
+      grid-area: section2;}
     .footer{
       grid-area: footer;
+    }
+
+    .nav ul li a {
+      grid-area: header;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    .contenedor2 {
+      height: 50px;
+      width: auto;
+      margin: 100px;
+      text-align: center;
+      background-size: contain;
+      margin-bottom: 10%;
+    }
+    .nav{
+      z-index: 99;
     }
   }
 
