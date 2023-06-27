@@ -322,8 +322,11 @@ ul, ol {
   "main main main"
   
   "section section2 section3"
+
   "section_cla section_cla section_cla"
+  
   "section_cla2 section_cla2 section_cla2"
+
   "footer footer footer";
   column-gap: 20px;
   row-gap: 20px;
