@@ -228,7 +228,7 @@ a{
 }
 
 #header {
-    height: 130px;
+    height: auto;
     margin: 0% auto;
     width:  100%;
     font-family:Arial, Helvetica, sans-serif;
@@ -255,7 +255,7 @@ ul, ol {
     background-color:#000;
     color:#fff;
     text-decoration:none;
-    padding:10px 12px;
+    padding:0px 12px;
     display:block;
 
 }
@@ -273,8 +273,8 @@ ul, ol {
 }
 
 .nav ul li:hover > ul {
-    display:block;
-    z-index:99
+    /* display:block; */
+
 }
 
 .nav ul li ul li {
@@ -324,7 +324,7 @@ ul, ol {
   "section section2 section3"
 
   "section_cla section_cla section_cla"
-  
+
   "section_cla2 section_cla2 section_cla2"
 
   "footer footer footer";
@@ -450,5 +450,20 @@ ul, ol {
   }
   .footer{
     grid-area: footer;
+  }
+  .nav ul li a {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .section3{
+    grid-area: section3;
+  }
+  .section_cla{
+    grid-area: section;
+  }
+  .section_cla2{
+      grid-area: section2;
   }
 }
