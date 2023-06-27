@@ -5,6 +5,9 @@ body{
   background-color: #ffffff; 
 }
 
+iframe {
+  max-width:600px; 
+  }
 
 .contact_form{  
   width: 460px; 
@@ -64,7 +67,7 @@ button{
   border-color: #a7a9a9; 
   border-style: solid; 
   border-radius: 10px;  
-  width: 420px;   
+  max-width: 420px;   
   cursor: pointer;
 }
 
@@ -323,9 +326,16 @@ ul, ol {
   
   "section section2 section3"
 
-  "section_cla section_cla section_cla"
+  "section4 section5 section6"
 
-  "section_cla2 section_cla2 section_cla2"
+  ". . ."
+  ". . ."
+  ". . ."
+  ". . ."
+  ". . ."
+  ". . ."
+
+
 
   "footer footer footer";
   column-gap: 20px;
@@ -343,6 +353,7 @@ ul, ol {
 }
 .section{
   grid-area: section;
+
 }
 .section2{
   grid-area: section2;
@@ -350,12 +361,17 @@ ul, ol {
 .section3{
   grid-area: section3;
 }
+.section5{
+  grid-area: section5;
+}
 .section_cla{
+  grid-area: section;
   grid-row: 1fr;
-  grid-column: 1fr;}
+  grid-column: 1 / 4;;}
 .section_cla2{
-    grid-row: 1fr;
-    grid-column: 1fr;}
+  grid-area: section4;
+  grid-row: 1fr;
+}
 .footer{
   grid-area: footer;
 }
@@ -464,6 +480,14 @@ ul, ol {
     grid-area: section;
   }
   .section_cla2{
-      grid-area: section2;
+      grid-area: section3;
+  }
+  .contenedor2 {
+    height: 50px;
+    width: auto;
+    margin: 100px;
+    text-align: center;
+    background-size: contain;
+    margin-bottom: 10%;
   }
 }
