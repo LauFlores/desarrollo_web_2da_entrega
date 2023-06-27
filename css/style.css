@@ -68,6 +68,9 @@ button{
   cursor: pointer;
 }
 
+.navbar-toggler{
+  background-color: #ffffff;}
+
 
 button p{
   color: #ffffff; 
@@ -225,7 +228,7 @@ a{
 }
 
 #header {
-    height: 120px;
+    height: 130px;
     margin: 0% auto;
     width:  100%;
     font-family:Arial, Helvetica, sans-serif;
@@ -239,6 +242,10 @@ ul, ol {
     display: inline-block;
 }
 
+.nav{
+  z-index: 99;
+}
+
 .nav > ul > li {
     float:left;
     margin: 0% auto;
@@ -250,29 +257,35 @@ ul, ol {
     text-decoration:none;
     padding:10px 12px;
     display:block;
+
 }
 
 .nav ul li a:hover {
     background-color:#434343;
+
 }
 
 .nav ul li ul {
     display:none;
     position:absolute;
-    min-width:140px;
+    min-width:240px;
+
 }
 
 .nav ul li:hover > ul {
     display:block;
+    z-index:99
 }
 
 .nav ul li ul li {
     position:relative;
+
 }
 
 .nav ul li ul li ul {
     right:-140px;
     top:0px;
+
 }
 
 /* Footer */
@@ -309,7 +322,8 @@ ul, ol {
   "main main main"
   
   "section section2 section3"
-  
+  "section_cla section_cla section_cla"
+  "section_cla2 section_cla2 section_cla2"
   "footer footer footer";
   column-gap: 20px;
   row-gap: 20px;
@@ -333,6 +347,12 @@ ul, ol {
 .section3{
   grid-area: section3;
 }
+.section_cla{
+  grid-row: 1fr;
+  grid-column: 1fr;}
+.section_cla2{
+    grid-row: 1fr;
+    grid-column: 1fr;}
 .footer{
   grid-area: footer;
 }
@@ -411,6 +431,7 @@ ul, ol {
   grid-area: header;
   display: flex;
   flex-direction: column;
+  z-index:99
 }
   .main{
     grid-area: main;
